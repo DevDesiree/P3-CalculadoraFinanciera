@@ -1,0 +1,74 @@
+@import url(./calculator.css);
+@import url(./display.css);
+@import url(./buttons.css);
+
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #bdc3c7;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+
+#calc_container {
+  max-width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.39);
+  border-radius: 10px;
+  box-shadow: 1px 1px grey;
+  padding: 1.5rem;
+}
+
+
+#calc_display {
+  width: 100%;
+  height: 30px;
+  background-color: aquamarine;
+  text-align: end;
+  margin-bottom: 15px;
+  font-size: 30px;
+  padding: 8px 0 8px 0;
+}
+
+
+#calc_container_buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+  gap: 4px;
+}
+
+input[type="button"] {
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 2px 2px grey;
+}
+
+#btn_clear {
+  grid-column: span 2;
+}
+
+#btn_zero {
+  grid-column: span 2;
+}
+
+#btn_equal {
+  grid-row: span 2;
+}
+
+#calc_container_buttons input[type="button"]:hover {
+  background-color: #ddd;
+}
+
+#calc_container_buttons input[type="button"]:active {
+  background-color: #aaa;
+}
+
