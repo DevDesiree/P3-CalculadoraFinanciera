@@ -1,0 +1,98 @@
+#calc_container_buttons {
+    display: grid;
+    grid-template: repeat(5, minmax(50px, 120px)) / repeat(5, minmax(50px, 100px));
+    place-items: center;
+}
+
+.calc_container_buttons input[type="button"] {
+    border: none;
+    border-radius: 4px;
+    font-size: 50px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 4px grey;
+    background-color: rgba(41, 39, 39, 0.432);
+    color: white;
+    cursor: pointer;
+}
+
+.color_button {
+    background-color: rgba(142, 108, 196, 0.582) !important;
+}
+
+.color_button:hover {
+    background-color: rgb(98, 0, 255) !important;
+}
+
+.color_button_operator {
+    background-color: rgba(94, 17, 133, 0.267) !important;
+}
+
+.color_button_operator:hover {
+    background-color: rgba(94, 17, 133, 0.800) !important;
+}
+
+#btn_clear {
+    grid-column: span 2;
+    background-color: rgb(167, 97, 97);
+}
+
+#btn_clear:hover{
+    background-color: rgb(248, 0, 0);
+}
+
+#btn_zero {
+    grid-column: span 2;
+}
+
+#btn_equal {
+    grid-row: span 2;
+    background-color: orange;
+}
+
+#btn_equal:hover{
+    background-color: green;
+}
+
+.calc_container_buttons input[type="button"]:hover {
+    background-color: #b1b6af21;
+}
+
+.calc_container_buttons input[type="button"]:active {
+    box-shadow: 1px 1px grey;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    #calc_container_buttons {
+        gap: 10px;
+    }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 1023px) {
+    #calc_container_buttons {
+        grid-template: repeat(5, minmax(50px, 120px)) / repeat(5, minmax(50px, 100px));
+    }
+
+    #calc_container_buttons {
+        gap: 6px;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    #calc_container_buttons {
+        grid-template: repeat(5, minmax(30px, 70px)) / repeat(5, minmax(30px, 80px));
+    }
+
+    #calc_container_buttons input[type="button"] {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #calc_container_buttons {
+        grid-template: repeat(5, minmax(30px, 60px)) / repeat(5, minmax(30px, 80px));
+    }
+
+}

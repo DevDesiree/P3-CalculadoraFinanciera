@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Financiera</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./public/css/style.css">
 
 <body>
@@ -12,36 +15,35 @@
         <div id="calc_container">
             <div id="calc_display">
                 <div id="calc_result">
-                    
                 </div>
             </div>
-            <div id="calc_container_buttons">
-                <input type="button" value="C">
-                <input type="button" value="%">
-                <input type="button" value="√">
+            <div class="calc_container_buttons" id="calc_container_buttons">
+                <input type="button" class="color_button" value="C">
+                <input type="button" class="color_button" value="%">
+                <input type="button" class="color_button" value="√">
                 <input type="button" id="btn_clear" value="←">
 
                 <input type="button" value="7">
                 <input type="button" value="8">
                 <input type="button" value="9">
-                <input type="button" value="+">
-                <input type="button" value="*">
+                <input type="button" class="color_button_operator" value="+">
+                <input type="button" class="color_button_operator" value="*">
 
                 <input type="button" value="4">
                 <input type="button" value="5">
                 <input type="button" value="6">
-                <input type="button" value="-">
-                <input type="button" value="/">
+                <input type="button" class="color_button_operator" value="-">
+                <input type="button" class="color_button_operator" value="/">
 
                 <input type="button" value="1">
                 <input type="button" value="2">
                 <input type="button" value="3">
-                <input type="button" value="π">
+                <input type="button" class="color_button" value="π">
                 <input type="button" id="btn_equal" value="=">
 
                 <input type="button" id="btn_zero" value="0">
                 <input type="button" value="00">
-                <input type="button" value=".">
+                <input type="button" class="color_button" value=".">
             </div>
         </div>
     </main>

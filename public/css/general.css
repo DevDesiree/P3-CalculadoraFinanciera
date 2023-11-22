@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(4px);
+    height: 100vh;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
