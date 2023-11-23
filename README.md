@@ -6,15 +6,15 @@ Proyecto 3 Individual del Bootcamp FemCoders 😍
 
 # 📑 Índice
 
-1. [Descripción](#descripción)
+1. [Descripción](#-descripción)
 
-2. [Captura de pantalla](#screenshoot)
+2. [Captura de pantalla](#-screenshoot)
 
-3. [Tecnologías Utilizadas](#tecnologías-utilizadas)
+3. [Tecnologías Utilizadas](#-tecnologías-utilizadas)
 
-4. [Guía de Instalación](#guía-de-instalación)
+4. [Guía de Instalación](#-guía-de-instalación)
 
-5. [Autor](#autor)
+5. [Autor](#-autor)
 
 
 ## 📄 Descripción
