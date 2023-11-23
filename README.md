@@ -3,8 +3,6 @@ Proyecto 3 Individual del Bootcamp FemCoders 😍
 
 - 🚀 **Desplegada en Vercel** : [Calculadora Financiera](https://p3-calculadora-financiera.vercel.app/)
 ---
-<br>
-
 
 # 📑 Índice
 
