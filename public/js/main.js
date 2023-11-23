@@ -7,7 +7,20 @@ document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementById("calc_container_buttons");
     let history = [];
 
-    // Funciones
+    //Operations
+    function calculate() {
+        try {
+            let expression = display.innerText;
+            let result = eval(display.innerText);
+            display.innerText = result;
+            history.push(`${expression} = ${result}`);
+            updateHistoryDisplay();
+        } catch (error) {
+            display.innerText = "Error";
+        }
+    }
+
+    //Add Display, remove lastchart and Clear.
     function addToDisplay(value) {
         display.innerText += value;
     }
@@ -22,18 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         display.innerText = display.innerText.slice(0, -1);
     }
 
-    function calculate() {
-        try {
-            let expression = display.innerText;
-            let result = eval(display.innerText);
-            display.innerText = result;
-            history.push(`${expression} = ${result}`);
-            updateHistoryDisplay();
-        } catch (error) {
-            display.innerText = "Error";
-        }
-    }
-
+    //Operations Extra
     function calculateSquareRoot() {
         if (display.innerText.length == 0) {
             display.innerText = "Error : √0 es Null"
@@ -60,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    //Modal 
     function updateHistoryDisplay() {
         if (history.length > 0) {
             historyDisplay.innerText = history[history.length - 1];
@@ -87,7 +90,10 @@ document.addEventListener("DOMContentLoaded", function () {
         historyModal.style.display = "none";
     }
 
+    historyContainer.addEventListener("click", openHistoryModal);
 
+
+    //Click Buttons and launch funcion
     buttons.addEventListener("click", function (event) {
         if (event.target.value !== undefined) {
             let clickedButton = event.target.value;
@@ -117,9 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    historyContainer.addEventListener("click", openHistoryModal);
-
-
+    //Click anywhere close modal
     document.onclick = function (event) {
         if (event.target === historyModal || event.target === display) {
             closeHistoryModal();
