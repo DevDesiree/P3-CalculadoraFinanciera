@@ -7,6 +7,7 @@
     <title>Calculadora Financiera</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./public/css/style.css">
 
@@ -15,6 +16,17 @@
         <div id="calc_container">
             <div id="calc_display">
                 <div id="calc_result">
+                </div>
+                <div id="history_container">
+                </div>
+                <button id="history_icon"><i class="fa-solid fa-clock-rotate-left"></i></button>
+                <div id="history_display"></div>
+            </div>
+            <div id="history_modal" class="modal">
+                <div class="modal_content">
+                    <span class="close">&times;</span>
+                    <h2>Historial de Operaciones</h2>
+                    <div id="history_modal_content"></div>
                 </div>
             </div>
             <div class="calc_container_buttons" id="calc_container_buttons">
@@ -38,7 +50,7 @@
                 <input type="button" value="1">
                 <input type="button" value="2">
                 <input type="button" value="3">
-                <input type="button" class="color_button" value="π">
+                <input type="button" id="btn_pi" class="color_button" value="π">
                 <input type="button" id="btn_equal" value="=">
 
                 <input type="button" id="btn_zero" value="0">
@@ -47,6 +59,8 @@
             </div>
         </div>
     </main>
+
+    <script src="./public/js/main.js"></script>
 </body>
 
 </html>

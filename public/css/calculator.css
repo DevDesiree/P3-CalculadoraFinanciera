@@ -1,15 +1,62 @@
 #calc_container {
-    margin-top: 50px;
+    margin-top: 25px;
     max-width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.39);
     border-radius: 10px;
     box-shadow: 2px 2px rgba(247, 238, 238, 0.527);
     padding: 1.5rem;
     background-color: rgba(0, 0, 0, 0.678);
+    position: relative;
+}
+
+
+.modal {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 83%; 
+    overflow: auto;
+    animation: slideIn 0.5s ease-in-out;
+    color: white;
+    font-weight: bold;
+}
+
+.modal_content {
+    position: relative;
+    background-color: rgba(94, 91, 91, 0.795);
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box; 
+    overflow-y: auto;
+}
+
+#history_modal_content > div{
+    padding-top: 15px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 @media only screen and (max-width: 450px) {
     #calc_container {
         width: 320px;
     }
+    .modal {
+        height: 75%; 
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .modal {
+        height: 72%; 
+    }
+
 }
