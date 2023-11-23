@@ -14,7 +14,7 @@ Proyecto 3 Individual del Bootcamp FemCoders 😍
 
 4. [Guía de Instalación](#-guía-de-instalación)
 
-5. [Autor](#-autor)
+5. [Autor](#-autora)
 
 
 ## 📄 Descripción
@@ -41,7 +41,7 @@ Proyecto 3 Individual del Bootcamp FemCoders 😍
 - **Responsive y Adaptive:**
   La calculadora se adapta de manera óptima para garantizar su funcionamiento en dispositivos móviles, tablets y computadoras de escritorio.
 
-## 🖼️ Screenshoot
+## 🖼 Screenshoot
 ![Imagen de la Calculadora](./ImgReadme/image.png)
 *Vista previa de la interfaz de la calculadora en dispositivos móviles y Ordenador.*
 
