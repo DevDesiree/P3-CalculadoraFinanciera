@@ -14,7 +14,7 @@ Proyecto 3 Individual del Bootcamp FemCoders 😍
 
 4. [Guía de Instalación](#-guía-de-instalación)
 
-5. [Autor](#-autora)
+5. [Autora](#-autora)
 
 
 ## 📄 Descripción
