@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         display.innerText = "";
         historyDisplay.innerText = "";
         history = [];
+        updateModalContent();
     }
 
     function removeLastCharacter() {
@@ -125,9 +126,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Click anywhere close modal
     document.onclick = function (event) {
+        let main = document.getElementById("main")
         if (event.target === historyModal || event.target === display) {
             closeHistoryModal();
-        }
+        } else if (event.target == main) {
+            closeHistoryModal();
+        } 
     };
 
 });

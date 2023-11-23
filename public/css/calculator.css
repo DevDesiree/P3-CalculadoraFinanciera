@@ -17,9 +17,9 @@
     width: 100%;
     height: 83%; 
     overflow: auto;
-    animation: slideIn 0.5s ease-in-out;
     color: white;
     font-weight: bold;
+    animation: slideIn 0.5s ease-in-out;
 }
 
 .modal_content {
