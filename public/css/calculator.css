@@ -1,5 +1,5 @@
 #calc_container {
-    margin-top: 25px;
+    margin-top: 10px;
     max-width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.39);
     border-radius: 10px;
@@ -8,7 +8,6 @@
     background-color: rgba(0, 0, 0, 0.678);
     position: relative;
 }
-
 
 .modal {
     display: none;
