@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     calculateSquareRoot();
                     break;
                 case "π":
-                    display.innerText += Math.PI.toFixed(10);
+                    display.innerText += Math.PI.toFixed(5);
                     break;
                 default:
                     addToDisplay(clickedButton);
