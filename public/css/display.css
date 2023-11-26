@@ -1,4 +1,4 @@
-#calc_display {
+#calc_container_display {
     width: 100%;
     height: 115px;
     background-color: aquamarine;
@@ -44,20 +44,20 @@
 
 
 @media only screen and (min-width: 1024px) {
-    #calc_display {
+    #calc_container_display {
         height: 115px;
         margin-bottom: 30px;
     }
 }
 
 @media only screen and (min-width: 451px) and (max-width: 1023px) {
-    #calc_display {
+    #calc_container_display {
         margin-bottom: 30px;
     }
 }
 
 @media only screen and (max-width: 450px) {
-    #calc_display {
+    #calc_container_display {
         height: 100px;
         font-size: 33px;
     }
