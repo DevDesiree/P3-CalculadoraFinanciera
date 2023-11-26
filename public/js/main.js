@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    let containerDisplay = document.getElementById("calc_container_display");
     let display = document.getElementById("calc_result");
     let historyDisplay = document.getElementById("history_display");
     let historyModalContent = document.getElementById("history_modal_content");
@@ -9,14 +10,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Operations
     function calculate() {
-        try {
-            let expression = display.innerText;
-            let result = eval(display.innerText);
-            display.innerText = result;
-            history.push(`${expression} = ${result}`);
-            updateHistoryDisplay();
-        } catch (error) {
-            display.innerText = "Error";
+        if (checkPercentage()) {
+            calculatePercentage();
+
+        } else {
+            try {
+                let expression = display.innerText;
+                let result = eval(display.innerText);
+                
+                if (Number.isInteger(result)){
+                    display.innerText = result;
+                    history.push(`${expression} = ${result}`);
+                } else {
+                    display.innerText = result.toFixed(5);
+                    history.push(`${expression} = ${result.toFixed(5)}`);
+                }
+
+                updateHistoryDisplay();
+                    
+            } catch (error) {
+                display.innerText = "Error";
+            }
+        }
+    }
+
+    function checkPercentage(){
+        let checkChartDisplay = display.innerText;
+
+        for (let i = 0; i < checkChartDisplay.length; i++) {
+            if (checkChartDisplay[i] === "%") {
+                return true
+            }
         }
     }
 
@@ -53,14 +77,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function calculatePercentage() {
-        try {
-            let result = (display.innerText) / 100;
-            display.innerText = result;
-            history.push(`${display.innerText}%`);
-            updateHistoryDisplay();
-        } catch (error) {
-            display.innerText = "Error";
-        }
+        let getDisplay = display.innerText;
+        let cutDisplay = getDisplay.split("%");
+
+        let beforePercentage = cutDisplay[0];
+        let afterPercentage = cutDisplay[1];
+
+        let percentageValue = (beforePercentage * afterPercentage) / 100;
+        let total = `${beforePercentage}%${afterPercentage} = ${percentageValue}`;
+        
+        display.innerText = percentageValue;
+        history.push(total);
+        updateHistoryDisplay();
     }
 
     //Modal 
@@ -91,9 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
         historyModal.style.display = "none";
     }
 
-    historyContainer.addEventListener("click", openHistoryModal);
-
-
     //Click Buttons and launch funcion
     buttons.addEventListener("click", function (event) {
         if (event.target.value !== undefined) {
@@ -108,9 +133,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     break;
                 case "=":
                     calculate();
-                    break;
-                case "%":
-                    calculatePercentage();
                     break;
                 case "√":
                     calculateSquareRoot();
@@ -127,11 +149,10 @@ document.addEventListener("DOMContentLoaded", function () {
     //Click anywhere close modal
     document.onclick = function (event) {
         let main = document.getElementById("main")
-        if (event.target === historyModal || event.target === display) {
-            closeHistoryModal();
-        } else if (event.target == main) {
+        if (event.target === containerDisplay || event.target === display || event.target === main) {
             closeHistoryModal();
         } 
     };
 
+    historyContainer.addEventListener("click", openHistoryModal);
 });
